@@ -1,4 +1,8 @@
-Steps to make the additional product images at the bottom of the product page in the narrative theme a more reasonable size. For reference, here is what the original product image gallery looks like in the theme, for a product with 8 images: https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-original.png. And this is what the product image gallery looks like for the same product after the changes: https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-after-changes.png
+Steps to make the additional product images at the bottom of the product page in the narrative theme a more reasonable size. 
+For reference, here is what the original product image gallery looks like in the theme, for a product with 8 images: 
+https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-original.png. 
+And this is what the product image gallery looks like for the same product after the changes: 
+https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-after-changes.png
 
 First, make a copy of your theme so you can get it back if something goes wrong.
 
@@ -118,4 +122,11 @@ One thing to be aware of - in the product-template.liquid file you'll find this 
 
     {% if total_media == 1 %}<div class="page-width">{% endif %}
     
-If you make the changes to the theme.sccs.liquid file as described earlier, the above code in product-template.liquid doesn't do anything, since the purpose of that code was to limit the gallery to 3 images per row maximum, and to ensure the entire container was filled with images. So each row would have either 1, 2 or 3 product images, depending on the total number of product images. The code we changed in theme.sccs.liquid forces the images to a specific size, so the number of images per row is determined by the size of the image, rather than the other way around. Leaving the code above in doesn't hurt anything, and it is used to define classes that are used elsewhere (although strictly speaking also not needed anymore), so taking it out is likely to break things without being more thorough. I was going for a quick fix. Put another way, I'm pretty sure my solution is a hack, but it does the job so I'm okay with it. This is one of the reasons I'm not a developer anymore. 
+If you make the changes to the theme.sccs.liquid file as described earlier, the above code in product-template.liquid doesn't do anything,
+since the purpose of that code was to limit the gallery to 3 images per row maximum, and to ensure the entire container was filled with images. 
+So each row would have either 1, 2 or 3 product images, depending on the total number of product images. 
+The code we changed in theme.sccs.liquid forces the images to a specific size, so the number of images per row is determined by the size of the image, 
+rather than the other way around. Leaving the code above in doesn't hurt anything, and it is used to define classes that are used elsewhere 
+(although strictly speaking also not needed anymore), so taking it out is likely to break things without being more thorough. 
+I was going for a quick fix. Put another way, I'm pretty sure my solution is a hack, but it does the job so I'm okay with it.
+This is one of the reasons I'm not a developer anymore. 
