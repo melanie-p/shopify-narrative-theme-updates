@@ -14,7 +14,7 @@ To make the image gallery container a more reasonable size, add the following co
   margin-right: auto !important;
  }
       
-Find this piece of code:
+To update the size of the images in the gallery, find this piece of code:
 
   .product__submedia-list--single & {
     @include flex(none);
@@ -23,7 +23,7 @@ Find this piece of code:
   }
 }
 
-If there is only one image to display, that code will cause the single image to consume the entire width of the container. 
+If there is only one image to display, the above code will cause the single image to consume the entire width of the container. 
 Update it as follows to make it smaller. If you used the previous section to limit the container size, a width of 20% will 
 allow 5 images per row in the gallery. You can adjust the 20% to some other number depending on how you want it to look.
 
