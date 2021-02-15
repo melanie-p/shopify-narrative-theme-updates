@@ -1,7 +1,7 @@
 To stop the the huge images from being displayed at the bottom of the product page, find the product-template.liquid file in the Sections folder.
 In product-template.liquid, find this part of the code:
       
-      <div class="product__submedia-list product__submedia-list--r{{ total_modulus }}{% if total_media == 1 %} product__submedia-list--single{% endif %}">
+     ` <div class="product__submedia-list product__submedia-list--r{{ total_modulus }}{% if total_media == 1 %} product__submedia-list--single{% endif %}">
       {% for media in product.media %}
 
         {% unless variant_media_ids contains media.id and section.settings.hide_variant_media %}
@@ -15,11 +15,11 @@ In product-template.liquid, find this part of the code:
       {% endfor %}
     </div>
     {% if total_media == 1 %}</div>{% endif %}
-    {% endif %}
+    {% endif %}`
   
   and comment it out so it looks like this:
     
-    {% comment %}  
+  `  {% comment %}  
       <div class="product__submedia-list product__submedia-list--r{{ total_modulus }}{% if total_media == 1 %} product__submedia-list--single{% endif %}">
       {% for media in product.media %}
 
@@ -35,4 +35,4 @@ In product-template.liquid, find this part of the code:
     </div>
     {% if total_media == 1 %}</div>{% endif %}
     {% endif %}
-    {% endcomment %}
+    {% endcomment %}`
