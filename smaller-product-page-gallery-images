@@ -1,4 +1,4 @@
-Steps to make the additional product images at the bottom of the product page in the narrative theme a more reasonable size.
+Steps to make the additional product images at the bottom of the product page in the narrative theme a more reasonable size. For reference, here is what the original product image gallery looks like in the theme, for a product with 8 images: https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-original.png. And here is what the product image gallery looks like for the same product after the changes: https://github.com/melanie-p/shopify-narrative-theme-updates/blob/main/narrative-product-gallery-after-changes.png
 
 First, make a copy of your theme so you can get it back if something goes wrong.
 
